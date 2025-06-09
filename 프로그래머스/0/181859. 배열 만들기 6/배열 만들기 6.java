@@ -4,17 +4,15 @@ class Solution {
         List<Integer> list = new ArrayList<>();
         int i = 0;
         while(i < arr.length) {
-            if(list.size()==0) {
-                list.add(arr[i]);
-                i++;
+            if(list.isEmpty()) {
+                list.add(arr[i++]);
             }
             else if(list.size()!=0) {
                 if(list.get(list.size()-1)==arr[i]) {
                     list.remove(list.size()-1);
                     i++;
                 }else {
-                    list.add(arr[i]);
-                    i++;
+                    list.add(arr[i++]);
                 }
             }
         }
